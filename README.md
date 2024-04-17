@@ -1,1 +1,1 @@
-#server
+#serverless enviornment to handle RSVP's for wedding website
