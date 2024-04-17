@@ -13,6 +13,11 @@ module.exports = async (req, res) => {
     const valueInputOption = 'USER_ENTERED';
     const resource = {values: req.body.values};
 
+    // Set CORS headers - update * to your website when ready for prod
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
     try {
         // Get the data from the sheet
         const getResponse = await sheets.spreadsheets.values.get({
