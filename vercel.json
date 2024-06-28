@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/frame.png", "dest": "/frame.png" },
+      { "src": "/api/updateSpreadsheet", "dest": "/api/updateSpreadsheet.js" },
+      { "src": "/(.*)", "dest": "/api/redirect.js" }
+    ]
+  }
